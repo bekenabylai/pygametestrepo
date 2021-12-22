@@ -58,3 +58,32 @@ blueghostpacman_image = pygame.image.load('blueghostpacman.png').convert_alpha()
 blueghostpacman_image = pygame.transform.scale(blueghostpacman_image, (40, 60)) #blueghost umenshit
 blueghostpacman_image_rect = blueghostpacman_image.get_rect()
 blueghostpacman_image_rect.center = ((WINDOW_WIDTH+BUFFER_DISTANCE), random.randint(HEADER_HEIGHT+25, WINDOW_HEIGHT-25))
+
+#yellowghost
+yellowghostpacman_image = pygame.image.load('yellowghostpacman.png').convert_alpha()
+yellowghostpacman_image = pygame.transform.scale(yellowghostpacman_image, (40, 60)) #yellowghost umenshit
+yellowghostpacman_image_rect = yellowghostpacman_image.get_rect()
+yellowghostpacman_image_rect.center = ((WINDOW_WIDTH+BUFFER_DISTANCE), random.randint(HEADER_HEIGHT+25, WINDOW_HEIGHT-25))
+
+# fonts and texts
+main_font = pygame.font.Font('AttackGraffiti.ttf', 32)
+
+score_text = main_font.render("POINT: " + str(player_score), True, RED)
+score_text_rect = score_text.get_rect()
+score_text_rect.topleft = (20, 20)
+
+game_name = main_font.render("HUNGRY PACMAN", True, RED, WHITE)
+game_name_rect = game_name.get_rect()
+game_name_rect.center = (WINDOW_WIDTH//2, HEADER_HEIGHT//2)
+
+live_text = main_font.render("LIFE: " + str(player_live), True, RED)
+live_text_rect = live_text.get_rect()
+live_text_rect.topleft = (WINDOW_WIDTH-(live_background_rect.width), 20)
+
+game_over_text = main_font.render("GAMEOVER", True, GREEN, DARKGREEN)
+game_over_rect = game_over_text.get_rect()
+game_over_rect.center = (WINDOW_WIDTH//2, WINDOW_HEIGHT//2)
+
+game_continue_text = main_font.render("PRESS ANY KEY", True, GREEN)
+game_continue_rect = game_continue_text.get_rect()
+game_continue_rect.center = (WINDOW_WIDTH//2, WINDOW_HEIGHT//2+100)
