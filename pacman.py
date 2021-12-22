@@ -52,3 +52,9 @@ ghostpck_image = pygame.image.load('ghostpck.png').convert_alpha()
 ghostpck_image = pygame.transform.scale(ghostpck_image, (40, 60)) #Ghost umenshit
 ghostpck_image_rect = ghostpck_image.get_rect()
 ghostpck_image_rect.center = ((WINDOW_WIDTH+BUFFER_DISTANCE), random.randint(HEADER_HEIGHT+25, WINDOW_HEIGHT-25))
+
+#blueghost
+blueghostpacman_image = pygame.image.load('blueghostpacman.png').convert_alpha()
+blueghostpacman_image = pygame.transform.scale(blueghostpacman_image, (40, 60)) #blueghost umenshit
+blueghostpacman_image_rect = blueghostpacman_image.get_rect()
+blueghostpacman_image_rect.center = ((WINDOW_WIDTH+BUFFER_DISTANCE), random.randint(HEADER_HEIGHT+25, WINDOW_HEIGHT-25))
