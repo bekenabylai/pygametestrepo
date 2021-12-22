@@ -27,3 +27,7 @@ ghostpck_velocity = GHOSTPCK_STARTING_VELOCITY
 blueghostpacman_velocity = BLUEGHOSTPACMAN_STARTING_VELOCITY
 yellowghostpacman_velocity = YELLOWGHOSTPACMAN_STARTING_VELOCITY
 acceleration = 0.5
+
+# main surface
+display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+pygame.display.set_caption("Hungry Pacman")
